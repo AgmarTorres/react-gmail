@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const counterSlice = createSlice({
+export const emailSlice = createSlice({
   name: "counter",
   initialState: {
     value: 0,
@@ -18,7 +18,7 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const { increment, decrement, incrementByAmount } = emailSlice.actions;
 export const incrementAsync = (amount) => (dispatch) => {
   setTimeout(() => {
     dispatch(incrementByAmount(amount));
@@ -27,4 +27,4 @@ export const incrementAsync = (amount) => (dispatch) => {
 
 export const selectCount = (state) => state.counter.value;
 
-export default counterSlice.reducer;
+export default emailSlice.reducer;

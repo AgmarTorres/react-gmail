@@ -49,11 +49,17 @@ function Header() {
         </div>
       </div>
       <div className="emailList__sections">
-        <Section Icon={InboxIcon} title="primary" color="red" selected />
+        <Section Icon={InboxIcon} title="Primary" color="red" selected />
         <Section Icon={PeopleIcon} title="Social" color="#1A73E8" />
         <Section Icon={LocalOfferIcon} title="Promotions" color="green" />
       </div>
       <div className="emailList__list">
+        <EmailRow
+          title="Twitch"
+          subject="Hey fellow streamer!!!"
+          description="This is a test"
+          time="10pm"
+        />
         <EmailRow
           title="Twitch"
           subject="Hey fellow streamer!!!"
