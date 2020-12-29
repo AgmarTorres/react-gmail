@@ -5,13 +5,29 @@ import { Checkbox, IconButton } from "@material-ui/core";
 import LabelImportantOutlinedIcon from "@material-ui/icons/LabelImportantOutlined";
 import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
 import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { selectMail } from "../../features/mailSlice";
 
 function EmailRow({ id, title, subject, description, time }) {
   const history = useHistory();
+  const dispatch = useDispatch();
+  const openMail = () => {
+    dispatch(
+      selectMail({
+        id,
+        title,
+        subject,
+        description,
+        time,
+      })
+    );
+    history.push("/mail");
+  };
 
   return (
     <div
       onClick={() => {
+        openMail();
         history.push("/mail");
       }}
       className="emailRow"
