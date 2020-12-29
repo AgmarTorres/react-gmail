@@ -2,11 +2,17 @@ import React from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
+import { useSelector } from "react-redux";
 import Mail from "./components/Mail";
 import EmailList from "./components/EmailList";
+import SendEmail from "./components/SendEmail";
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { selectSendMessageIsOpen } from "./features/mailSlice";
 
 function App() {
+  const sendMessageIsOpen = useSelector(selectSendMessageIsOpen);
+  console.log(sendMessageIsOpen);
   return (
     <Router>
       <div className="app">
@@ -22,6 +28,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        {sendMessageIsOpen && <SendEmail />}
       </div>
     </Router>
   );
