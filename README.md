@@ -24,3 +24,20 @@ Ativar
 projeto
 e-mail user
 Salvar
+
+firebase login
+
+firebase init
+
+hosting
+
+select yout project
+
+build folder
+yarn build
+firebase deploy
+
+https://clone-967d4.web.app/
+
+
+https://console.firebase.google.com/project/clone-967d4/overview?hl=pt-br
